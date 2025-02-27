@@ -1,25 +1,25 @@
 // import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 // import { GoogleAuthProvider } from "firebase/auth";
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import app from "./firebaseConfig"
+// import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+// import app from "./firebaseConfig"
 
-// google 
+// // google 
 
-const googleProvider = new GoogleAuthProvider();
+// const googleProvider = new GoogleAuthProvider();
 
-// googel sign in
-export const signInWithGoogle= async ()=>{
-    try{
-        const result = await signInWithPopup(auth,googleProvider)
-        const user = result.user;
-        localStorage.setItem("user",JSON.stringify)
-        return user
+// // googel sign in
+// export const signInWithGoogle= async ()=>{
+//     try{
+//         const result = await signInWithPopup(auth,googleProvider)
+//         const user = result.user;
+//         localStorage.setItem("user",JSON.stringify)
+//         return user
 
-    }catch(error){
-console.log("sign-in error", error)
-    }
-}
+//     }catch(error){
+// console.log("sign-in error", error)
+//     }
+// }
 
 
 
