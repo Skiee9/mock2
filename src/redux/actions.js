@@ -1,7 +1,7 @@
 import { signInWithPopup, signOut } from "firebase/auth"
 // import { getAuth } from "firebase/auth"
 // import {database} from "./firebase"
-import {database, auth, proivder} from "../firebaseConfig"
+import {database, auth, provider} from "../firebaseConfig"
 // import { getDatabase, ref, set, get, child, update } from "firebase/database"
 import {ref, push, update,remove,get} from "firebase/database"
 // authentictaioin login and logout

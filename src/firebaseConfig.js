@@ -9,6 +9,7 @@ import {getDatabase} from "firebase/database"
 const firebaseConfig = {
   apiKey: "AIzaSyBt6gOMShChxSGToTvGHyDkVgyFIvgaIq8",
   authDomain: "evaluation-436f6.firebaseapp.com",
+  databaseURL:"https://evaluation-436f6-default-rtdb.firebaseio.com/",
   projectId: "evaluation-436f6",
   storageBucket: "evaluation-436f6.firebasestorage.app",
   messagingSenderId: "896997955137",
@@ -17,10 +18,13 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const provider = new GoogleAuthProvider();
-const database = getDatabase(app)
-export default{app} 
+// const auth = getAuth(app);
+// const provider = new GoogleAuthProvider();
+// const database = getDatabase(app)
+export const database=getDatabase(app);
+export const auth = getAuth(app);
+export const provider= new GoogleAuthProvider();
+// export default{app} 
 // export default auth;
 // export default database;
 // export default provider;
