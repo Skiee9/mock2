@@ -1,13 +1,19 @@
-import {combineReducers, createStore , applyMiddleware} from "redux";
-import thunk from "redux-thunk"
+// import {combineReducers, createStore , applyMiddleware} from "redux";
+import {configureStore} from "@reduxjs/toolkit"
+import { thunk } from "redux-thunk"; 
+// import thunk from "redux-thunk"
+// import thunkMiddleware from "redux-thunk";
 import notesReducer from "./notesReducer"
 import authReducer from "./authReducer"
 
 
-
-const rootReducer = combineReducers({
-    notes:notesReducer,
-    auth:authReducer
+const store =configureStore({
+reducer:{
+        notes:notesReducer,
+        auth:authReducer,
+    },
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(thunk)
 })
-const store = createStore(rootReducer, applyMiddleware(thunk))
+
+// const store = createStore(rootReducer, applyMiddleware(thunk))
 export default store;
